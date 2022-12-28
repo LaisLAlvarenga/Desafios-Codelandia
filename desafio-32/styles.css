@@ -1,0 +1,25 @@
+:root {
+    /* Colors */
+    --green: #33E29A;
+    --gray: #414141;
+    --dark:#121212;
+    --dark-200: #262626;
+    --white: #FFFFFF;
+    --white-200:#BAACAC;
+
+    /* Fonts */
+    --font-inter: 'Inter', sans-serif;
+    --font-kufam: 'Kufam', sans-serif;
+}
+
+body {
+    background-color: #414141;
+}
+
+nav {
+    color: var(--white);
+}
+
+ul li {
+    list-style-type: none;
+}
