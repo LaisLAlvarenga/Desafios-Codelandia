@@ -13,9 +13,9 @@
 }
 
 * {
-    border: none;
-    padding: none;
-    margin: none;
+    border: 0;
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 
     font-family: var(--font-kufam);
@@ -43,6 +43,11 @@ body {
     background-position: center;
 }
 
+.open-menu-icon,
+.close-menu-icon {
+    display: none;
+}
+
 /* ===== Menu de Navegação ===== */
 nav {
     color: var(--white);
@@ -64,6 +69,11 @@ nav ul li a:hover {
     background-color: rgba(65, 65, 65, 0.5);
     border-radius: 8px;
     padding: 5px 15px;
+}
+
+/* Nav no Mobile */
+.menu-mobile-list {
+    display: none;
 }
 
 /* ==== Login ==== */
@@ -121,7 +131,7 @@ nav ul li a:hover {
 }
 
 .remember-password {
-    padding-bottom: 20px;
+    padding-bottom: 30px;
 }
 .remember-password input {
     width: 16px;
@@ -162,15 +172,134 @@ nav ul li a:hover {
 
 /* ==== Footer ==== */
 .footer {
-    padding-top: 150px;
+    padding-top: 100px;
+    padding-bottom: 40px;
 }
 
 .footer ul {
     display: flex;
-    text-align: center;
     gap: 40px;
+    text-align: center;
 }
 
 .footer ul li {
     color: var(--white);
+}
+
+/* ==== Responsive ==== */
+@media screen and (max-width: 480px) {
+    body {
+        padding-top: 20px;
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+        gap:190px;
+    }
+    
+    .logo {
+        width: 90px;
+        height: 42.35px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    /* ==== Menu no Mobile ==== */
+    .menu-mobile-list {
+        text-align: center;
+        padding: 100px 0px;
+        background-color: rgba(38, 38, 38, 0.9);
+
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+    }
+
+    .menu-mobile-list li{
+        margin-bottom: 30px;
+        font-size: 18px;
+    }
+
+    /* Icon open menu */
+    .open-menu-icon {
+        display: block;
+        background: transparent;
+    }
+
+    /* Icon close menu */
+    .close-menu-icon {
+        background: transparent;
+        display: none;
+
+        position: fixed;
+        top: 30px;
+        right: 30px;
+        z-index: 1;
+    }
+
+    .close-menu-icon img {
+        width: 20px;
+        height: 20px; 
+    }
+
+    .open {
+        display: block !important;
+    }
+    .close {
+        display: none;
+    }
+
+    .container-login {
+        padding: 0px 20px;    
+        margin-top: 100px;
+        background-color: rgba(38, 38, 38, 0.6);
+        
+        border: 1px solid #414141;
+        border-radius: 8px;
+    }
+
+    .content-login {
+        padding-top: 24px;
+        padding-bottom: 23px;
+    }
+
+    .content-login img {
+        width: 10%;
+        margin: auto;
+        padding-bottom: 15px;
+    }
+
+    .content-login label {
+        font-weight: 500;
+        color: var(--white);
+    }
+    
+    .content-login input {
+        width: 264px;
+    }
+
+    .content-login button {
+        width: 261px;        
+    }
+
+    .remember-password {
+        display: none;
+    }
+
+    .footer {
+        padding-top: 40px;
+    }
+
+    .footer ul {
+       display: inline-block;
+    }
+    .footer ul li {
+        margin-bottom: 40px;
+    }
 }

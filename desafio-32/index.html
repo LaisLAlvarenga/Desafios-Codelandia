@@ -12,8 +12,19 @@
     
 </head>
 <body>
-    <!-- Logo -->
-    <img src="./assets/logo-with-text.svg" alt="">
+    <div class="header">
+        <!-- Logo -->
+        <img class="logo" src="./assets/logo-with-text.svg" alt="">
+
+       <button class="open-menu-icon"> 
+            <img src="./assets/List.svg" alt="">
+        </button>
+
+        <button class="close-menu-icon"> 
+            <img src="./assets/close.png" alt="">
+        </button>
+        
+    </div>
 
     <!-- Menu Nav -->
     <nav>
@@ -25,6 +36,17 @@
             <li><a href="#">Perguntas</a></li>
         </ul>
     </nav>
+
+    <!-- Menu Nav Mobile-->
+    <div class="menu-mobile">
+        <ul class="menu-mobile-list">
+            <li><a href="#">Entrar</a></li>
+            <li><a href="#">Forum</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Mojang</a></li>
+            <li><a href="#">Perguntas</a></li>
+        </ul>
+    </div>
 
     <!-- Login -->
     <section class="container-login">
@@ -77,5 +99,8 @@
             </li>
         </ul>
     </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
+
